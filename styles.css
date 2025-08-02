@@ -1,0 +1,112 @@
+body {
+  --color-back: white;
+  --color-title-back: #55887c;
+  --color-title: #ffffff;
+  --color-theme: #ffc252;
+  --color-text: rgb(67, 66, 66);
+  --color-icon-front: #55887c;
+  --color-toolbar: #ffde59;
+  --color-toolbar-button: black;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v67/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2)
+    format('woff2');
+  font-family: 'Material Icons';
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-back);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  margin: 0;
+  background-color: var(--color-title-back);
+  padding: 16px;
+  color: var(--color-title);
+  font-size: large;
+  text-align: center;
+}
+
+span.icon {
+  display: inline-block;
+  vertical-align: sub;
+  margin-bottom: 0px;
+  color: var(--color-icon-front);
+  font-size: 16px;
+  font-family: 'Material Icons';
+  font-feature-settings: 'liga';
+}
+
+ul {
+  display: flex;
+  margin: 5px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+form {
+  margin: 16px;
+  text-align: center;
+}
+
+textarea {
+  display: block;
+  margin: 8px auto;
+  width: 90%;
+  height: 60px;
+  font-size: 16px;
+}
+
+button {
+  display: block;
+  margin: 8px 8px;
+  border: 2px solid var(--color-icon-front);
+  border-radius: 8px;
+  background-color: var(--color-toolbar);
+  padding: 8px 8px;
+  color: var(--color-toolbar-button);
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+#notes {
+  flex-flow: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: stretch;
+  padding-bottom: 50px;
+  color: var(--color-text);
+  a {
+    cursor: pointer;
+  }
+}
+
+#notes li {
+  margin-bottom: 16px;
+  border-top: 2px dotted var(--color-title-back);
+  padding-top: 8px;
+}
+
+#toolbar {
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+body > #toolbar {
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  background-color: var(--color-toolbar);
+  width: 100%;
+}
