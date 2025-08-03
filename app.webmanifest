@@ -23,5 +23,14 @@
       "sizes": "1024x1024",
       "type": "image/png"
     }
+  ],
+  "description": "Store notes and learning goals while you are coding",
+  "screenshots": [
+    {
+      "src": "screenshots/1.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form-factor": "narrow"
+    }
   ]
 }

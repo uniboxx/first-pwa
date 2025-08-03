@@ -6,13 +6,21 @@
     <link rel="manifest" href="app.webmanifest" />
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js"></script>
+    <script>
+      navigator.serviceWorker.register(
+        'serviceworker.js'
+        // ,{
+        //   type: 'module'
+        // }
+      );
+    </script>
   </head>
 
   <body>
     <h1>Codepad Masters</h1>
     <form>
       <textarea placeholder="Enter your new note"></textarea>
-      <ul id="toolbar">
+      <ul class="toolbar">
         <li>
           <button type="submit">
             <span class="icon">save</span>
@@ -21,11 +29,17 @@
         </li>
       </ul>
     </form>
-    <ul id="toolbar">
+    <ul class="toolbar">
       <li>
         <button id="btnLearn">
           <span class="icon">school</span>
           Learn
+        </button>
+      </li>
+      <li>
+        <button id="btnInstall">
+          <span class="icon">download</span>
+          Install
         </button>
       </li>
     </ul>

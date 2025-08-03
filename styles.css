@@ -1,4 +1,9 @@
-body {
+* {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+:root {
   --color-back: white;
   --color-title-back: #55887c;
   --color-title: #ffffff;
@@ -18,7 +23,8 @@ body {
 }
 
 body {
-  margin: 0;
+  margin: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
   background-color: var(--color-back);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -96,17 +102,26 @@ button {
   padding-top: 8px;
 }
 
-#toolbar {
+.toolbar {
   flex-wrap: wrap;
   align-content: center;
   justify-content: space-evenly;
   align-items: stretch;
 }
 
-body > #toolbar {
+body > .toolbar {
   position: fixed;
   bottom: 0;
   margin: 0;
   background-color: var(--color-toolbar);
   width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+}
+
+@media (display-mode: standalone) {
+  li:has(#btnInstall) {
+    display: none;
+  }
 }
