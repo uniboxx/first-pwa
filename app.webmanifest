@@ -30,7 +30,7 @@
       "src": "screenshots/1.png",
       "sizes": "512x512",
       "type": "image/png",
-      "form-factor": "narrow"
+      "form_factor": "narrow"
     }
   ]
 }
